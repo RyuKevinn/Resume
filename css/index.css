@@ -1,0 +1,360 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+body {word-break: keep-all;overflow-y: hidden; color:white;font-family: 'Titillium Web', sans-serif;}
+
+#header {background-color: rgba(0, 0, 0, 0.6);position: fixed;
+    transform: translateX(-50%);top: 0;left: 50%;
+    z-index: 9;display: none;
+}
+
+#header .depth1 {
+    display: flex;
+    width: 700px;color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 2px 20px 1px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#header .depth1 li {
+    width: 20%;padding: 20px 15px;
+    transition: all 0.5s;
+}
+
+#header .depth1 li a {
+    transition: all 0.7s;
+    display: block;text-align: center;
+}
+
+#header .depth1 li a:hover {color: #fff;transform: scale(1.3) }
+#header .depth1 li.on{color: #fff;transform: scale(1.3);}
+
+
+section {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+/* 섹션1 */
+.section1 {
+    background-position: left bottom;
+    background-image: url(../img/man-gb7b0edd7c_1920.jpg);
+    color: white;
+}
+.section1 .article{height: 100vh}
+
+.section1 .article .menu {
+    position: relative;
+    max-width: 700px;
+    height: 60%;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 .article .menu::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 0%;
+    transition: all 0.5s;
+    background-color: chartreuse;
+}
+
+.section1.on .article .menu::after { transition: all 6s; height: 120%;}
+
+.section1 .article .menu .txt {
+    height: 25%;
+    width: 50%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.section1 .article .menu .txt a {transition: all 0.5s}
+.section1 .article .menu .txt a:hover {transform: scale(1.2)}
+
+.section1 .article .menu .txt1 { align-self: flex-start;}
+.section1 .article .menu .txt2 { align-self: flex-end;}
+.section1 .article .menu .txt3 { align-self: flex-start;}
+.section1 .article .menu .txt4 { align-self: flex-end;}
+
+.section1.on .article .menu .txt{opacity: 1;}
+.section1.on .article .menu .txt1 { transition: all 4s 0.5s; }
+.section1.on .article .menu .txt2 { transition: all 4s 1.2s;}
+.section1.on .article .menu .txt3 { transition: all 4s 1.8s;}
+.section1.on .article .menu .txt4 { transition: all 4s 3s;}
+
+.section1 .article .autoClock {
+    opacity: 0;
+    position: absolute;
+    bottom: 25.5%;
+    left: 220px;
+    transform: rotateY(3deg);
+    font-size: 25px;
+    text-shadow: -3px 0px 0px darkgray;
+    transition: all 4s
+}
+
+.section1.on .article .autoClock { opacity: 1; transition-delay: 4s; }
+
+
+
+/* 섹션2 */
+.section2 {
+    background-position: top;
+    background-image: url(../img/background-gbee12fbfc_1920.jpg);
+    position: relative;
+}
+
+.section2 .article { color: darkgray;}
+
+.section2 .article::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    width: 2px;
+    height: 0%;
+    background: chartreuse;
+    transition: all 0.2s;
+}
+
+.section2.on .article::after { transition: all 8s; height: 60%; }
+
+.section2 .article .titbox {
+    margin: 80px 0 30px 30px;
+}
+
+.section2 .article .titbox span { font-size: 100px; opacity: 0; transition: all 0.5s}
+
+.section2.on .article .titbox span{ opacity: 1;}
+.section2.on .article .titbox span:nth-child(1) { transition: all 4s 1.5s}
+.section2.on .article .titbox span:nth-child(2) { transition: all 4s 2.2s}
+.section2.on .article .titbox span:nth-child(4) { transition: all 4s 2.6s}
+.section2.on .article .titbox span:nth-child(5) { transition: all 4s 1s}
+.section2.on .article .titbox span:nth-child(6) { transition: all 4s 2s}
+.clr1 {color: red;}
+.clr2 {color: white;}
+
+.section2 .article .ment {
+    margin-left: 30%;
+    max-width: 800px;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    transition: all 0.5s;
+    font-size: 16px;
+    line-height: 2.7em;
+}
+
+.section2.on .article .ment {
+    transition: all 4s 3s;
+    opacity: 1;
+}
+
+
+/* 섹션3 */
+.section3 { background-image: url(../img/keyboard-ga1917cce7_1920.jpg);}
+
+.section3 .article {
+    position: relative;
+    margin: 80px auto;
+    max-width: 800px;
+    height: 80%;
+}
+
+.section3 .article .profile {
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    display:flex;
+    perspective: 500px;
+}
+.section3 .article .tit{ text-align: center; font-size: 60px;}
+.section3 .article .profile > div{ width: 200px ; height: 300px; 
+    margin: 1%;
+    transform: perspective(500px);
+    transition: all 1s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    border-radius: 30px;
+    box-shadow: 3px 2px 10px 1px rgba(255,255,255,0.1);
+}
+
+.section3 .article .profile > div > h3 { 
+    padding-top: 10px;
+    margin-bottom:5px;
+    font-size: 22px;
+}
+.section3 .article .profile > div > p {
+    letter-spacing: 0.2em;
+    font-size:15px;
+}
+.section3 .article .profile .info3 p {font-size: 26px;}
+
+.section3 .article .profile .name{  transform:translateZ(-1000px); width: 20%;}
+.section3 .article .profile .info1{ transform:translateZ(-1500px); width: 25%;}
+.section3 .article .profile .info2{ transform:translateZ(-2000px); width: 32%;}
+.section3 .article .profile .info3{ transform:translateZ(-2500px); width: 15%;}
+.section3.on .article .profile >div { transform:translateZ(0px);opacity: 1;}
+
+.section3.on .article .profile .name {transition: all 4s;}
+.section3.on .article .profile .info1{transition: all 5s;}
+.section3.on .article .profile .info2{transition: all 6s;}
+.section3.on .article .profile .info3{transition: all 6.5s;}
+.section3 .article .profile .info3 p a { transition: all 0.5s}
+.section3 .article .profile .info3 p:hover a {color: rgba(255, 255, 255, 0.6)}
+
+.section3 .article::after{content:'';
+    content: '';
+    position: absolute;
+    bottom:25%;
+    width: 0%;
+    height: 2px;
+    background: chartreuse;
+    transition: all 0.2s;
+}
+.section3.on .article::after{ width:100%; transition:all 7s; }
+
+
+/* 섹션4 */
+.section4 {
+    background-image: url(../img/code-g20d716cfd_1920.jpg);}
+    
+.section4 .article{
+    margin-top :100px;height:80%;
+    max-width:400px;
+    position: relative; display: flex;
+    flex-direction: column;}
+
+.section4 .article::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 0%;
+    transition: all 0.5s;
+    background-color: chartreuse;
+}
+
+.section4.on .article::after { transition: all 10s; height: 80%;}
+
+.section4 .article .txt {
+    height: 16.3333%;
+    width: 50%;
+    font-size: 12px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.2em;
+    transition: all 0.2s;
+    opacity: 0;
+    padding:0 20px;
+}
+
+.section4 .article .txt:nth-child(odd){
+    align-items: flex-end; align-self: flex-start; text-align: end;
+}
+.section4 .article .txt:nth-child(even){
+    align-items: flex-start; align-self: flex-end; text-align: left;
+}
+
+.section4.on .article .txt{opacity: 1;}
+.section4.on .article .txt2 {transition: all 4s 1s;}
+.section4.on .article .txt3 {transition: all 4s 2s;}
+.section4.on .article .txt4 {transition: all 4s 3s;}
+.section4.on .article .txt5 {transition: all 4s 4.5s;}
+.section4.on .article .txt6 {transition: all 4s 6s}
+
+/* 섹션 5 */
+.section5 {background-image: url(../img/keyboard-gfbcb03c1b_1920.jpg);}
+.section5 img { width: 95%; transition: all 0.5s}
+.section5 img.on { transform: scale(1.1);}
+.section5 .article{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    align-items: center;
+}
+.section5 .article .tit { color: rgb(80, 76, 76)}
+.section5 .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section5 .content .port {
+    background: rgb(41, 40, 40);
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    width: 31%;
+    height: 460px;
+    border-radius: 30px;
+    text-align: center;
+}
+.section5 .article .content .port .view {
+    padding-top: 20px;
+    height: 60%;
+}
+
+.section5 .article .content .port .txt {
+    padding: 0 10px;
+}
+.section5 .article .content .port .txt  h3{
+    margin-bottom:15px; 
+    position:relative;
+}
+
+.section5 .article .content .port .txt h3::after{
+    content: '';
+    position: absolute;
+    bottom:-5px;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.2)
+}
+
+.section5 .article .content .port .txt p {
+    font-size:14px;
+}
+
+.section5 .article .git {
+    margin-top: 10px;
+    padding: 5px;
+    width:97%;
+    height: 50px;
+    background: rgb(41, 40, 40);
+    border-radius: 30px;
+    text-align: center;
+}
+.section5 .article .git span { font-size: 22px; font-weight: 700;}
+.section5 .article .git .link{display:inline ; margin: 0 20px; font-size: 20px }
+.section5 .article .git > a {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+
+
+
+#wrap .sign{display: none;
+    position: fixed; bottom: 3% ; left: 50%; transform: translateX(-50%)}
