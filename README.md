@@ -1,3 +1,3 @@
 # Resume
 
-https://ryukevinn.github.io/Resume/
+https://ryukevinn.github.io/jQuery_Resume/
