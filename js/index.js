@@ -124,7 +124,25 @@ $('.section1 .article .txt a').on('click', function(e){
 
 })
 
-//Prtfolio Hover
+//Portfolio Hover
 $('.section5 .content .port img').on('mouseover mouseout',function(){
     $(this).toggleClass('on')
 })
+
+$('.section3 .article .profile .info3 p a').on('click',function(){
+
+})
+
+
+//Section5 Slick-Slider
+$('.section5 .article .slideInner').slick({
+    autoplay:true,
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    fade: true,
+    cssEase: 'linear',
+    arrows:true,
+    prevArrow:`<button class="slick-arrow slick-prev"><i class="fa-solid fa-circle-chevron-left"></i></button>`,
+    nextArrow:`<button class="slick-arrow slick-next"><i class="fa-solid fa-circle-chevron-right"></i></button>`,
+});

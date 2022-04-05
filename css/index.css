@@ -56,6 +56,7 @@ section {
     margin: 150px auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .section1 .article .menu::after {
@@ -73,19 +74,20 @@ section {
 .section1.on .article .menu::after { transition: all 6s; height: 120%;}
 
 .section1 .article .menu .txt {
-    height: 25%;
+    height: 15%;
     width: 50%;
-    font-size: 30px;
+    font-size: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: 0.1em;
     transition: all 0.5s;
     opacity: 0;
+    /* border:1px solid yellow */
 }
 
-.section1 .article .menu .txt a {transition: all 0.5s}
-.section1 .article .menu .txt a:hover {transform: scale(1.2)}
+.section1 .article .menu .txt a {transition: all 0.7s}
+.section1 .article .menu .txt a:hover {transform: scale(1.1)}
 
 .section1 .article .menu .txt1 { align-self: flex-start;}
 .section1 .article .menu .txt2 { align-self: flex-end;}
@@ -105,7 +107,7 @@ section {
     left: 220px;
     transform: rotateY(3deg);
     font-size: 25px;
-    text-shadow: -3px 0px 0px darkgray;
+    text-shadow: -2px 0px 0px darkgray;
     transition: all 4s
 }
 
@@ -120,7 +122,7 @@ section {
     position: relative;
 }
 
-.section2 .article { color: darkgray;}
+.section2 .article { color: lightgray;;}
 
 .section2 .article::after {
     content: '';
@@ -206,21 +208,18 @@ section {
     letter-spacing: 0.2em;
     font-size:15px;
 }
-.section3 .article .profile .info3 p {font-size: 26px;}
-
 .section3 .article .profile .name{  transform:translateZ(-1000px); width: 20%;}
 .section3 .article .profile .info1{ transform:translateZ(-1500px); width: 25%;}
 .section3 .article .profile .info2{ transform:translateZ(-2000px); width: 32%;}
 .section3 .article .profile .info3{ transform:translateZ(-2500px); width: 15%;}
+.section3 .article .profile .info3 p {font-size: 26px;}
 .section3.on .article .profile >div { transform:translateZ(0px);opacity: 1;}
-
 .section3.on .article .profile .name {transition: all 4s;}
 .section3.on .article .profile .info1{transition: all 5s;}
 .section3.on .article .profile .info2{transition: all 6s;}
 .section3.on .article .profile .info3{transition: all 6.5s;}
 .section3 .article .profile .info3 p a { transition: all 0.5s}
 .section3 .article .profile .info3 p:hover a {color: rgba(255, 255, 255, 0.6)}
-
 .section3 .article::after{content:'';
     content: '';
     position: absolute;
@@ -285,76 +284,52 @@ section {
 .section4.on .article .txt6 {transition: all 4s 6s}
 
 /* 섹션 5 */
-.section5 {background-image: url(../img/keyboard-gfbcb03c1b_1920.jpg);}
+.section5 {
+    background-image: url(../img/keyboard-gfbcb03c1b_1920.jpg);
+    display:flex;
+    align-items:center;
+}
 .section5 img { width: 95%; transition: all 0.5s}
 .section5 img.on { transform: scale(1.1);}
 .section5 .article{
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
     align-items: center;
 }
-.section5 .article .tit { color: rgb(80, 76, 76)}
-.section5 .content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.section5 .content .port {
-    background: rgb(41, 40, 40);
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-    width: 31%;
-    height: 460px;
-    border-radius: 30px;
-    text-align: center;
-}
-.section5 .article .content .port .view {
-    padding-top: 20px;
-    height: 60%;
-}
 
-.section5 .article .content .port .txt {
-    padding: 0 10px;
+.section5 .article .slideInner{width:25vw; position:relative;}
+.section5 .article .slideInner img{width:100%;}
+.section5 .article .slideInner button{ color: white; border:none;font-size: 40px; position:absolute;top:50%; transform:translateY(-50%) }
+.section5 .article .slideInner .slick-prev{ right:110%; z-index:9}
+.section5 .article .slideInner .slick-next{ left:110%; z-index:9}
+.section5 .article .slideInner .txt{
+    margin-top: 20px;
+    border-radius: 20px;;
+    padding: 10px 40px;
+    background:linear-gradient(to right bottom, black, rgb(39, 37, 37),rgba(0,0,0,0.5),rgb(66, 66, 66),rgba(255,255,255,0.2),black)
 }
-.section5 .article .content .port .txt  h3{
-    margin-bottom:15px; 
-    position:relative;
-}
+.section5 .article .slideInner h3{text-align: center; font-size: 25px; padding-bottom:10px;}
 
-.section5 .article .content .port .txt h3::after{
-    content: '';
-    position: absolute;
-    bottom:-5px;
-    left:0;
-    width: 100%;
-    height: 1px;
-    background: rgba(255,255,255,0.2)
-}
+.section5 .article .tit {  margin-top:10px;  ; color: rgba(255,255,255,0.7);}
 
-.section5 .article .content .port .txt p {
-    font-size:14px;
-}
-
-.section5 .article .git {
+.section5 .article .info {
     margin-top: 10px;
-    padding: 5px;
-    width:97%;
-    height: 50px;
+    height:45px;
+    width:100%;
+    padding: 0 20px;
+    line-height: 50px;;
     background: rgb(41, 40, 40);
     border-radius: 30px;
     text-align: center;
 }
-.section5 .article .git span { font-size: 22px; font-weight: 700;}
-.section5 .article .git .link{display:inline ; margin: 0 20px; font-size: 20px }
-.section5 .article .git > a {
-    font-size: 30px;
+.section5 .article .info a{display:block; transition:all 0.5s}
+.section5 .article .info a:hover{transform:scale(1.1)}
+
+.section5 .article .git a i{
+    font-size: 24px;
+    margin-left:10px;
     vertical-align: middle;
 }
 
-
-
-
-#wrap .sign{display: none;
-    position: fixed; bottom: 3% ; left: 50%; transform: translateX(-50%)}
+#wrap .sign{z-index:0;display: none;
+    position: fixed; bottom: 10px ; left: 50%; transform: translateX(-50%)}
